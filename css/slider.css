@@ -1,0 +1,28 @@
+.owl-nav{
+    position: absolute;
+    top:50%;
+    
+}
+.owl-nav .owl-prev{
+    position: absolute;
+    left:10px;
+
+}
+.owl-nav .owl-next{
+    position: absolute;
+    right:50px;
+    
+}
+.owl-nav button {
+height: 50px;
+width:50px;
+color:#fff;
+background-color: rgba(0,0,0,0.7);
+}
+.owl-nav button span{
+    font-size: 5rem;
+    color: #fff;
+}
+#owl-branding img:hover{
+    
+}

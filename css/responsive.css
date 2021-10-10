@@ -1,0 +1,37 @@
+/*Header section  ////////NaV Start*/
+@media (max-width:992px){
+    .nav-area{
+        display: none;
+    }
+    .call-area{
+        display: none;
+    }
+    .carousel-caption{
+        display: none;
+    }
+}
+@media (min-width:992px){
+    .fa-bars{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Header section  ////////NaV End*/

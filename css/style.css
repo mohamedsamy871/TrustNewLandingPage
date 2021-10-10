@@ -1,0 +1,1021 @@
+
+/*Global settings************Start*/
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+
+}
+p{
+    text-align: justify;
+}
+
+/*Global settings************End*/
+
+/**************************************************************************************************************************************/
+
+/*mobile-menu section  //////// Start*/
+.mobile-menu{
+    display: none;
+    min-width: 275px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    background-color: #fff;
+
+}
+.mobile-menu .mobile-menu-logo{
+    margin: 10px 13px 20px;
+}
+.mobile-menu .mobile-menu-logo a .mobile-logo-image{
+    max-height:50px;
+}
+.mobile-menu ul li {
+    background-color: transparent;
+    transition: 2s border-bottom ease-in-out;
+    border: none;
+    
+}
+.mobile-menu ul li::after{
+    content: '';
+    width:80%;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    transition: 0.5s all ease-in;
+    margin-top: 10px;
+}
+.mobile-menu ul li:hover:after{
+    background-color: #000;
+}
+.mobile-menu ul li a{
+    color: #000;
+}
+
+.mobile-menu .mobile-sub-menu{
+    display: none;
+}
+
+.mobile-menu .mobile-menu-social{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    margin:0 20px 20px;
+}
+.mobile-menu .mobile-menu-social span{
+    color: #757575;
+}
+.mobile-menu .mobile-menu-social .social-icon{
+    color: #757575;
+    width: 25px;
+    margin-left: 2px;
+    height: 25px;
+    display: inline-block;
+    padding-left: 7px;
+    transition: 0.6s all ease-in-out;
+}
+.mobile-menu .mobile-menu-social .social-icon:hover{
+    background-color: #757575;
+    border-radius: 50%;
+    color: #fff;
+
+}
+.mobile-menu .mobile-menu-social .social-icon svg{
+    font-size: 0.8rem;
+}
+
+.close-mobile-menu{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(21, 21, 21, 0.8);
+    position: absolute;
+    right: 0;
+    display: none;
+    z-index: 9;
+}
+.close-mobile-menu::before{
+    width: 14px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1px 0 0 -7px;
+    content: "";
+    background: #fff;
+    transform: rotate(
+45deg);
+    -webkit-transform: rotate(
+45deg);
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.close-mobile-menu::after{
+    width: 14px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1px 0 0 -7px;
+    content: "";
+    background: #fff;
+    transform: rotate(
+45deg);
+    -webkit-transform: rotate(
+-45deg);
+}
+
+/*end of mobile menu*/
+
+
+/*Header section ////////// Start*/
+/*****************************************************************************************************************/
+header{
+    background-color: transparent;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    line-height: 50px;
+    border-bottom: 1px solid #5b5b5e;
+}
+.logo-area{
+    margin-top: 25px;
+}
+.logo-area svg{
+    color: #fff;
+}
+.logo-area img{
+    width: 80px;
+    margin-top:-11px;
+}
+
+.nav-area a{
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #a0a0a1!important;
+    transition: all 0.6s ease-in-out;
+}
+.nav-area a:hover{
+    color: #fff!important;
+}
+.nav-area ul li{
+    margin-right: 20px;
+}
+ .nav-link{
+    color:#dadada!important;
+}
+.nav-area ul li .t-active{
+    color:#dadada;
+}
+
+.dropdown-menu a:hover{
+    color: #111!important;
+}
+
+.services-menu{
+    min-width: 920px;
+    position: absolute;
+    left: -226px;
+    top: 45px;
+}
+
+.call-area{
+    margin-top: 15px;
+    margin-left: 35px;
+}
+.call-area a {
+    color:#d5d3e9;
+
+}
+.call-area .call-link{
+    margin-right: 10px;
+}
+/************************************************************************************************************************/
+
+/*slider-start*/
+.trust-overlay{
+background-color:rgba(0, 0, 0, 0.7);
+width: 100%;
+height: 100%;
+z-index: 1;
+position: absolute;
+top:0;
+}
+#page-carousel .carousel-item img {
+    -webkit-animation: thisthing 5s;
+    -o-animation: thisthing 5s;
+    animation: thisthing 5s;
+}
+@keyframes thisthing {
+    from{
+        transform:scale(1,1);
+    }
+    50%  {
+        transform: scale(1.1,1.1);
+    }
+    to{
+        transform:scale(1,1);
+    }
+
+}
+#page-carousel .carousel-control-prev{
+    z-index: 2;
+}
+#page-carousel .carousel-caption{
+    bottom: 50%!important;
+}
+#page-carousel .carousel-caption::before{
+    content: 'WE ARE TRUST CREATIVES';
+    font-size: 3rem;
+    -webkit-animation: beforetext 5s;
+    -o-animation: beforetext 5s;
+    animation: beforetext 5s;
+    animation-name: beforetext;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+
+@keyframes beforetext {
+    from{
+        content: 'WE ARE';
+    }
+    50%  {
+        content: 'WE ARE';
+    }
+    to{
+        content: 'WE ARE';
+    }
+
+}
+#page-carousel .carousel-caption::after{
+    content: 'WE ARE TRUST CREATIVES';
+    font-size: 3rem;
+    color: #db3737;
+    font-weight: bold;
+    -webkit-animation: thistext 5s;
+    -o-animation: thistext 5s;
+    animation: thistext 5s;
+    animation-name: thistext;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+
+@keyframes thistext {
+    from{
+        content: 'UNIQUE';
+    }
+    50%  {
+        content: 'AWESOME';
+    }
+    to{
+        content: 'ENGINEERS';
+    }
+
+}
+
+
+.header-button{
+    color: #787878 ;
+    border: 0.5px solid #787878;
+    background-color: transparent;
+    display: inline-block;
+    max-width: 153px;
+    position: absolute;
+    bottom: -84px;
+    left: 44%;
+    border-radius: 0;
+    font-size: 0.8rem;
+    padding: 10px 24px;
+}
+
+.header-button:hover{
+    color: #fff;
+}
+
+
+/*slider-end*/
+
+/*Header section  //////////End*/
+
+
+/********************************about Page****************************************Start**************************************/
+
+
+.about-second-image{
+    background-image: url('https://trustcreatives.com/wp-content/uploads/2021/10/2-1.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-third-image{
+    background-image: url("../imgs/123.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.about-fourth-image{
+    background-image: url("../imgs/4-2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-fourth-image h1{
+    font-size: 4rem;
+    line-height: 82px;
+}
+
+/********************************about Page****************************************End**************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************key Clients Page****************************************Start**************************************/
+.key-clients-section{
+    margin-top: 85px;
+    margin-bottom: 205px;
+}
+.key-clients-section img{
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+/********************************key Clients Page****************************************End**************************************/
+
+
+
+/********************************Branding Page****************************************Start**************************************/
+
+#owl-branding .item{
+    position: relative;
+}
+#owl-branding .branding-caption{
+    width: 100%;
+    display: none;
+    background-color: #222;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding:30px 10px;
+    color:#fff;
+    z-index: 9;
+}
+
+
+
+.branding-second-image{
+    background-image: url('../imgs/brand-identity.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.branding-third-image{
+    background-image: url('../imgs/artof.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.full-paragraph p{
+    line-height: 35px;
+}
+
+
+
+.edar-identity{
+    background-image: url('../imgs/edar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.hasafa-identity{
+    background-image: url('../imgs/hasafa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+
+
+
+/*******************************Services section in branding page*********************Start*****************/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.service-container{
+    background-image: url('../imgs/graphic-design/application-photo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.my-overlay{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: cover;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.content-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.service-title{
+    letter-spacing: 2px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color:#fff;
+    text-align: center;
+}
+.title-border{
+    width:100px;
+    margin: 10px auto;
+    height:3px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    background-size: cover;
+}
+
+.service-box{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 30px 20px 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        red, 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;   
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    margin: 70px;
+    text-align: center;
+    max-width: 33.33%;
+    
+}
+.service-box a{
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+
+}
+.service-box a:hover{
+transform: rotate(45deg);
+}
+.icon-container{
+    text-align: left;
+    margin:20px auto 0;
+
+}
+.icon-container svg{
+    transform: rotate(-45deg);
+    color:#ecf0f1;
+    font-size: 35px;
+}
+.title-container{
+    transform: rotate(-45deg);
+    text-align: center;
+    margin: 3px -2px 10px 36px;
+    color:#d8d8d8
+}
+/*****************************Services section in branding page*********************End*****************/
+.portofolio-in-branding{
+position: relative;
+}
+.portofolio-in-branding img{
+ max-width: 100%;
+ transition:all 0.3s ease-in-out;
+position: relative;
+left: 0;
+bottom: 0;
+}
+
+.portofolio-in-branding .branding-caption{
+    width: 94%;
+    background-color: #222;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 30px 0;
+    color: #fff;
+    z-index: 9;
+    margin-right: 15px;
+    margin-left: 15px;
+    display: none;
+}
+.portofolio-in-branding .see-more{
+    background-color: transparent;
+    color: #000;
+    font-size: 12px;
+    padding: 11px 30px;
+    border: 1px solid #000;
+}
+
+
+
+.contact-form{
+    background-image: url('../imgs/contact-form.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.form-control::placeholder{
+    color: #fff;
+}
+.contact-form textarea{
+    resize: none;
+}
+.contact-form input,.contact-form textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #777;
+    padding:10px;
+    transition: all 0.7s ease-in-out;
+}
+.contact-form input:focus,.contact-form textarea:focus  {
+    border: 1px solid transparent!important;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+
+
+
+
+/********************************Branding Page****************************************End**************************************/
+
+
+
+
+/********************************Graphic Design Page****************************************Start**************************************/
+
+.graphic-first-image{
+    background-image: url('../imgs/graphic-design/2335.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.graphic-second-image{
+    background-image: url('../imgs/graphic-design/second.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.graphic-third-image{
+    background-image: url('../imgs/graphic-design/third.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.graphic-fourth-image{
+    background-image: url('../imgs/graphic-design/fourth.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.graphic-fifth-image{
+    background-image: url('../imgs/graphic-design/fifth.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+
+
+.contact-form-graphic{
+    background-image: url('../imgs/graphic-design/contact-form-graphic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.form-control::placeholder{
+    color: #fff;
+}
+.contact-form-graphic textarea{
+    resize: none;
+}
+.contact-form-graphic input,.contact-form-graphic textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #777;
+    padding:10px;
+    transition: all 0.7s ease-in-out;
+}
+.contact-form-graphic input:focus,.contact-form-graphic textarea:focus  {
+    border: 1px solid transparent!important;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: none;
+}
+/********************************Graphic Design Page****************************************End**************************************/
+
+/********************************motion graphic Page****************************************Start**************************************/
+
+
+.motion-first-image{
+    background-image: url('../imgs/motion/first.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.motion-second-image{
+    background-image: url('../imgs/motion/second.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.motion-third-image{
+    background-image: url('../imgs/motion/third.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.motion-fourth-image{
+    background-image: url('../imgs/motion/fourth.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.motion-fifth-image{
+    background-image: url('../imgs/motion/fifth.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+
+
+
+.contact-form-motion{
+    background-image: url('../imgs/motion/motiongraphics.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.form-control::placeholder{
+    color: #fff;
+}
+.contact-form-motion textarea{
+    resize: none;
+}
+.contact-form-motion input,.contact-form-motion textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #777;
+    padding:10px;
+    transition: all 0.7s ease-in-out;
+}
+.contact-form-motion input:focus,.contact-form-motion textarea:focus  {
+    border: 1px solid transparent!important;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.contact-first-image{
+    background-image: url('../imgs/contact/newww.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+
+/********************************motion graphic Page****************************************Start**************************************/
+
+
+
+/********************************Contact Us Page****************************************Start**************************************/
+.contact-address{
+    background-color: #333;
+    background-size: cover;
+}
+.contact-address .has-line ::after{
+    content: '';
+    width: 1px;
+    height: 126px;
+    background-color: #444;
+    position: absolute;
+    top: 52px;
+    right: 0;
+}
+.contact-address p{
+    color: #999796;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************Contact Us Page****************************************End**************************************/
+
+
+
+/********************************Portofolio Page****************************************Start**************************************/
+.portofolio-title .search-box select{
+    border: none;
+    border-bottom: 1px solid #222;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
+}
+.portofolio-title .search-box select:focus{
+    border: none;
+    border-bottom: 1px solid #222;
+}
+.portofolio-title .search-box select:focus-visible{
+    border: none;
+    border-bottom: 1px solid #222;
+}
+.portofolio-title .search-box select option{
+    background-color: #222;
+    color: #b6b6b6;
+    margin-bottom:15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 15px;
+    font-size: 1.3rem;
+}
+.portofolio-title .search-box select:focus> option:checked,
+.portofolio-title .search-box select:focus> option:hover{
+    background-color: #222;
+}
+
+.portfolio-images img:hover {
+    -webkit-filter: brightness(130%);
+    transform: translateY(1px) rotateX(4deg) rotateY(3deg);
+ }
+ .portfolio-images .shining{
+     border:1px solid #eee;
+     background-color: transparent;
+     padding:10px;
+     position: absolute;
+     top:12%;
+     left:12%;
+     display: none;
+ }
+ .portfolio-images .shining svg{
+     color: #fff;
+    margin-top: 20%;
+ }
+ .portfolio-images .shining .plus-icon{
+     position: relative;
+     width:50%;
+     height: 50%;
+     top: 9%;
+     left: 22%;
+ }
+ .portfolio-images .shining .plus-icon::before{
+    content: '';
+    width: 1px;
+    height: 65px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    background-color: #fff;
+
+ }
+ .portfolio-images .shining .plus-icon::after{
+    content: '';
+    width: 65px;
+    height: 1px;
+    position: absolute;
+    top: 83%;
+    left: 29%;
+    z-index: 10;
+    background-color: #fff;
+    
+ }
+
+
+/********************************Portofolio Page****************************************End**************************************/
+
+
+
+/*****************************************Social Media Page********************************** Start***************/
+
+
+
+.social-first-image{
+    background-image: url('../imgs/social/one.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.social-second-image{
+    background-image: url('../imgs/social/second.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.social-third-image{
+    background-image: url('../imgs/social/three.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.social-fourth-image{
+    background-color: #ededed;
+    background-size: cover;
+    min-height: 300px;
+}
+
+
+
+
+
+.contact-form-social{
+    background-image: url('../imgs/social/smm2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.form-control::placeholder{
+    color: #fff;
+}
+.contact-form-social textarea{
+    resize: none;
+}
+.contact-form-social input,.contact-form-social textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #777;
+    padding:10px;
+    transition: all 0.7s ease-in-out;
+}
+.contact-form-social input:focus,.contact-form-social textarea:focus  {
+    border: 1px solid transparent!important;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************Social Media Page********************************** End***************/
+
+/********************************Seo Page****************************************Start**************************************/
+
+.seo-first-image{
+    background-image: url('../imgs/seo/first.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+.seo-second-image{
+    background-image: url('../imgs/seo/second.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************Seo Page********************************** End***************/
+
+
+/********************************footer section****************************************Start**************************************/
+.footer{
+    background-color: #222
+}
+.footer p,.footer span{
+    font-size: 0.8rem;
+}
+.footer .social-icon{
+    color: #6f6f6f;
+    width: 25px;
+    margin-left: 2px;
+    height: 25px;
+    display: inline-block;
+    padding: 0 8px;
+    transition: 0.6s all ease-in-out;
+    background-color: #111;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.footer  .social-icon:hover{
+    background-color: #fff;
+    color: #111;
+
+}
+.footer  .social-icon svg{
+    font-size: 0.8rem;
+}
+.footer li{
+    padding-bottom: 8px;
+}
+.footer a, .footer p{
+    color: #a9a6a6;
+}
+/********************************footer section****************************************End**************************************/
+
+
+
