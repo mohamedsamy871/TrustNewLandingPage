@@ -1,99 +1,91 @@
 $(document).ready(function(){
-    $('.fa-bars').click(function(e){
-        
-        $('.mobile-menu').fadeToggle();
-        $('.close-mobile-menu').fadeIn();
-        e.stopPropagation();
-    });
+//text animation in banner
+    var textHeight = $('.first-banner h2').height()*3;
+    var textWidth = $('.first-banner').width();
+    $(window).scroll(function() {
+        var hT = $('.first-banner').offset().top,
+        hH = $('.first-banner').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+        $('.first-banner .text-overlay').height(textHeight);
+    $('.first-banner .text-overlay').width(textWidth);
+    $('.first-banner .text-overlay').fadeIn(1000);
+    $('.first-banner .text-overlay').fadeOut(500);
+    }
+})
 
-    $('.page-head').height($(window).height());
-    var menuheight= $('header').height();
-    $('#owl-demo').height($(window).height()-menuheight);
-    $('.mobile-menu').height($(window).height());
 
-    $('.close-mobile-menu').click(function(){
-        $('.mobile-menu').fadeOut();
-        $('.close-mobile-menu').fadeOut();
-    });
-    $(document.body).click(function(e){
+//hover in portfolio
+$('#portfolio-section a').hover(function(){
+    $(this).children('img').addClass('zoom-in');
+    $(this).children('.portfolio-overlay').fadeIn();
+    $(this).children('.portfolio-caption').animate({
+        opacity: 0.55,
+        left: "150",
+        height: "toggle"
+      }, 500);
+},function(){
+    $(this).children('img').removeClass('zoom-in');
+    $(this).children('.portfolio-overlay').fadeOut();
 
-        $('.mobile-menu').fadeOut();
-        $('.close-mobile-menu').fadeOut();
-    });
-    $('.mobile-menu').click(function(m){
-        m.stopPropagation();
-    });
+    $(this).children('.portfolio-caption').fadeOut();
+})
 
-    $("#owl-demo").owlCarousel({
-        loop:true,
-        dots:false,
-        items:1,
-        autoplay:false,
-        smartSpeed:1200,
-        nav : true, // Show next and prev buttons
-        slideSpeed : 500,
-        paginationSpeed : 400,
-        singleItem:true,
-        autoHeight: true,
 
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-    
-    });
-    
-    $("#owl-branding").owlCarousel({
-        loop:true,
-        dots:false,
-        items:2,
-        autoplay:true,
-        smartSpeed:1200,
-        animateIn:'animate__jackInTheBox',
-        nav : false, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true,
-        autoHeight: true,
+//hover in social
+$('.social-section a').hover(function(){
+    $(this).children('.icon-container').css('backgroundColor','#cb0000');
+},function(){
+    $(this).children('.icon-container').css('backgroundColor','rgba(255,255,255,0.2)');
+})
 
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-    
-    });
-    $('#owl-branding .trust-overlay').hover(function(){
-        $(this).siblings('div').fadeToggle();
-    });
 
-    $("#owl-branding-key-clients").owlCarousel({
-        loop:true,
-        dots:false,
-        items:10,
-        autoplay:true,
-        smartSpeed:1200,
-        nav : false, // Show next and prev buttons
-        slideSpeed : 150,
-        paginationSpeed : 200,
-        singleItem:true,
-        autoHeight: true
-    });
-    $('.portofolio-in-branding img').hover(function(){
-        $(this).css('bottom','80px');
-        $(this).siblings('div').fadeIn();
 
-    },function(){
-        $(this).css('bottom','0');
-        $(this).siblings('div').fadeOut();
+$("#owl-branding-key-clients").owlCarousel({
+    loop:true,
+    dots:false,
+    items:5,
+    autoplay:true,
+    smartSpeed:1200,
+    nav : false, // Show next and prev buttons
+    slideSpeed : 150,
+    paginationSpeed : 200,
+    singleItem:true,
+    autoHeight: true
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var rightarrow = $('.testimonials .right-arrow');
+    leftarrow = $('.testimonials .left-arrow');
+function hidearrow(){
+    $('.client:first').hasClass('active') ? leftarrow.fadeOut() : leftarrow.fadeIn();
+    $('.client:last').hasClass('active') ? rightarrow.fadeOut() : rightarrow.fadeIn();
+    };
+    hidearrow();
+    $(rightarrow).on('click',function(){
+        $('.testimonials .active').fadeOut(300,function(){
+            $(this).removeClass('active').next('.client').addClass('active').fadeIn();
+            hidearrow();
+        });
     });
-    $('.portfolio-images a').hover(function(){
-        $(this).siblings('.shining').fadeIn();
-    },function(){
-        $(this).siblings('.shining').fadeOut(1000);
+    $(leftarrow).on('click',function(){
+        $('.testimonials .active').fadeOut(300,function(){
+            $(this).removeClass('active').prev('.client').addClass('active').fadeIn();
+            hidearrow();
+        });
     });
-    
 });
