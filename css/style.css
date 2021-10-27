@@ -20,7 +20,7 @@ html{
 
 h1{
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     font-size: 3.5rem;
     font-weight: bold;
 }
@@ -435,6 +435,37 @@ top:0;
     color: #fff!important;
 }
 /********************************about section****************************************End**************************************/
+
+/********************************achievements-section ****************************************Start**************************************/
+.achievements-section{
+    background-image: url('../imgs/graphic-design/third.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.achievements-section .number-container{
+    background-color: rgba(255,255,255,0.1);
+    padding:25px;
+
+}
+.achievements-section h5{
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+}
+.achievements-section span{
+    text-align: center;
+    color: var(--red);
+    font-size: 0.8rem;
+    text-align: center;
+display: block;
+}
+
+
+/********************************achievements-section****************************************End**************************************/
+
+
+
 
 
 
