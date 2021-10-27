@@ -1,5 +1,5 @@
 $(document).ready(function(){
-//text animation in banner
+//text overlay animation in banner
     var textHeight = $('.first-banner h2').height()*3;
     var textWidth = $('.first-banner').width();
     var flag = 0;
@@ -14,6 +14,34 @@ $(document).ready(function(){
         })
     }
 
+
+
+
+
+
+//numbering animation in services
+$(window).scroll(function() {
+    var hT = $('#achievement-section').offset().top,
+        hH = $('#achievement-section').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    console.log((hT - wH), wS);
+    if (wS > (hT + hH - wH)) {
+        $('.count-number').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 900,
+                easing: 'swing',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        }); {
+            $('.count-number').removeClass('count-number').addClass('counted');
+        };
+    }
+});
 
 
 //hover in portfolio
@@ -41,14 +69,14 @@ $('.social-section a').hover(function(){
 })
 
 
-
+//clients logo section
 $("#owl-branding-key-clients").owlCarousel({
     loop:true,
     dots:false,
     items:5,
     autoplay:true,
     smartSpeed:1200,
-    nav : false, // Show next and prev buttons
+    nav : false, 
     slideSpeed : 150,
     paginationSpeed : 200,
     singleItem:true,
@@ -58,17 +86,7 @@ $("#owl-branding-key-clients").owlCarousel({
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//testmonials section
 var rightarrow = $('.testimonials .right-arrow');
     leftarrow = $('.testimonials .left-arrow');
 function hidearrow(){
@@ -88,4 +106,48 @@ function hidearrow(){
             hidearrow();
         });
     });
+
+
+
+//scroll
+$('.scroll-top a').click(function(){
+    document.querySelector('#page-carousel').scrollIntoView({ 
+        behavior: 'smooth' 
+
+      });
+     // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+  
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

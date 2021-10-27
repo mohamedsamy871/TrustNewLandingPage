@@ -460,7 +460,14 @@ top:0;
     text-align: center;
 display: block;
 }
-
+.achievements-section .number-symbol{
+    display: inline;
+    color: #fff;
+    font-size: 4rem;
+    position:absolute;
+    top:16px;
+    right:80px;
+}
 
 /********************************achievements-section****************************************End**************************************/
 
@@ -648,9 +655,7 @@ color: #999;
 #owl-branding-key-clients .item{
     padding-top:20%;
 }
-#owl-branding-key-clients img{
-
-}
+/********************************contact form section****************************************Start**************************************/
 
 
 .contact-form-section{
@@ -706,11 +711,6 @@ color: #999;
     border: 1px solid transparent;
     border-radius: 0;
 }
-
-
-.footer h6{
- font-size: 0.8rem;
-}
 .contact-form-section .scroll-top{
     width:29px;
     height:28px;
@@ -725,6 +725,15 @@ color: #999;
 .contact-form-section .scroll-top svg{
     color: #a3a3a3;
 }
+
+/********************************contact form section****************************************End**************************************/
+
+/********************************footer and scroll button****************************************start**************************************/
+
+.footer h6{
+ font-size: 0.8rem;
+}
+
 .page-head{
     position: relative;
 }
@@ -741,3 +750,5 @@ color: #999;
 .scroll-down svg{
     color: #fff;
 }
+/********************************footer and scroll button****************************************End**************************************/
+
