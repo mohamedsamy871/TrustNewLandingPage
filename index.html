@@ -94,7 +94,7 @@
       </div>
     </div>
     <div class="close-mobile-menu"></div>
-    <header>
+    <header id="page-head">
       <div class="container">
           <div class="row">
             <div class="col-lg-3">
@@ -159,11 +159,12 @@
       </div>
     </header>
     <div id="page-carousel" class="carousel slide" data-ride="carousel">
+      <!--
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
+      </ol>-->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="trust-overlay"></div>
@@ -182,6 +183,14 @@
         <p style="display: inline;position:absolute;bottom: -9px;left:43%;">creative agency</p>
         <a href="#" class="btn header-button ">WHAT WE DO </a>
       </div>
+    </div>
+    <div class="scroll-down">
+      <a href="#about-section" class="text-decoration-none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.75735 5.63605L6.34314 7.05026L12 12.7071L17.6569 7.05029L16.2427 5.63608L12 9.87872L7.75735 5.63605Z" fill="currentColor" />
+          <path d="M6.34314 12.7071L7.75735 11.2929L12 15.5356L16.2427 11.2929L17.6569 12.7071L12 18.364L6.34314 12.7071Z" fill="currentColor" />
+        </svg>
+      </a>
     </div>
     <div id="about-section" class="mt-5 mb-5" >
       <div class="container" style="max-width: 1424px;">
@@ -216,10 +225,10 @@
         </div>
       </div>
     </div>
-    <div class="first-banner pb-5">
+    <div class="first-banner pb-5 ">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center text-light">
+          <div class="col-lg-12 text-center text-light js-banner-animation">
             <div class="text-overlay"></div>
             <h2 class="font-weight-bold pb-2 pt-2">"PASSION LEADS TO DESIGN, DESIGN LEADS TO PERFORMANCE,</h2>
             <h2 class="font-weight-bold p-0">PERFORMANCE LEADS TO <span>SUCCESS!"</span></h2>
@@ -410,7 +419,104 @@
           <img src="imgs/logos/jquery-white.png" class="w-50" alt="Hilton" class="d-block">
       </div>
     </div>
+
+    <div class="contact-form-section pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5 mt-5">
+            <h1 class="text-light">LET'S WORK TOGETHER            </h1>
+            <P class="text-light text-center m-0 mt-5 mb-2">We welcome you to contact us for more information
+            </P>
+            <P class="text-light text-center mb-2">about any of our products or services.</P>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="contact-info p-5">
+              <h3 class="text-danger pb-3">Our Location</h3>
+              <a href="#" class="text-decoration-none d-block text-light pb-2">
+                <i class="fas fa-home text-danger mr-1"></i>
+                <span>Fawzy Moaz St., Smouha, Alexandria</span>
+              </a>
+              <a href="#" class="text-decoration-none d-block text-light pb-2">
+                <i class="fas fa-phone-alt text-danger mr-1"></i>
+                <span>+20 1020720 852</span>
+              </a>
+              <a href="#" class="text-decoration-none d-block text-light pb-2">
+                <i class="fas fa-globe-africa text-danger mr-1"></i>
+                <span>https://trustcreatives.com/</span>
+              </a>
+              <a href="#" class="text-decoration-none d-block text-light pb-2">
+                <i class="far fa-envelope text-danger mr-1"></i>
+                <span>info@trustcreatives.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-form p-5">
+              <h3 class="text-danger pb-3">Drop Us A Line </h3>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Your Name (required)</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Your Email (required)</label>
+                  <input type="email" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Subject</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Subject</label>
+                  <textarea type="text" class="form-control" id="exampleInputPassword1" ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-top">
+        <a href="#page-head" class="text-decoration-none">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.6569 11.2929L16.2427 12.7071L12 8.46444L7.75735 12.7071L6.34314 11.2929L12 5.63605L17.6569 11.2929Z" fill="currentColor" />
+            <path d="M17.6569 16.9497L16.2427 18.3639L12 14.1213L7.75735 18.364L6.34314 16.9498L12 11.2929L17.6569 16.9497Z" fill="currentColor" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer pt-5 pb-4">
+      <div class="container" style="max-width: 1340px;">
+        <div class="row">
+          <div class="col-lg-6">
+            <h6>Created by Trust Creative Solution</h6>
+            <p style="font-size: 0.7rem;">© All rights reserved. Developed by Trust Creative Solutions.</p>
+          </div>
+          <div class="col-lg-6">
+              <div class="float-right pt-3">
+                  <a href="#" class="text-decoration-none call-link text-dark" >
+                    <i class="fab fa-facebook-f mr-3"></i>     
+                  </a>
+                  <a href="#" class="text-decoration-none search-link text-dark">
+                    <i class="fab fa-twitter mr-3"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none search-link text-dark">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
+
+
+
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

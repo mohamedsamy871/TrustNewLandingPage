@@ -2,18 +2,18 @@ $(document).ready(function(){
 //text animation in banner
     var textHeight = $('.first-banner h2').height()*3;
     var textWidth = $('.first-banner').width();
-    $(window).scroll(function() {
-        var hT = $('.first-banner').offset().top,
-        hH = $('.first-banner').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH)){
-        $('.first-banner .text-overlay').height(textHeight);
-    $('.first-banner .text-overlay').width(textWidth);
-    $('.first-banner .text-overlay').fadeIn(1000);
-    $('.first-banner .text-overlay').fadeOut(500);
+    var flag = 0;
+    if(flag==0){
+        flag=1;
+        $('.js-banner-animation ').hover(function(){
+            $('.first-banner .text-overlay').height(textHeight);
+            $('.first-banner .text-overlay').fadeIn();
+            $('.first-banner .text-overlay').fadeOut(2500);
+        },function(){
+            $('.js-banner-animation ').removeClass('js-banner-animation');
+        })
     }
-})
+
 
 
 //hover in portfolio
