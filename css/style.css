@@ -20,7 +20,9 @@ html{
 
 h1{
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 8px;
+    letter-spacing: 1px;
+    font-size: 3.5rem;
+    font-weight: bold;
 }
 
 /*Global settings************End*/
@@ -337,10 +339,6 @@ top:0;
 /*Header section  //////////End*/
 
 /********************************about section****************************************Start**************************************/
-
-#about-section h1{
-    font-weight: bold;
-}
 #about-section p{
     color: rgba(49, 49, 49, 1);
     text-align: justify;
@@ -437,13 +435,56 @@ top:0;
     color: #fff!important;
 }
 /********************************about section****************************************End**************************************/
+
+
+
+/********************************top-services-section ****************************************Start**************************************/
+.top-services-section{
+    background-image: url('../imgs/our-services-g.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top-services-section a p{
+    color: rgba(255,255,255,0.8);
+    text-align: left;
+
+}
+.top-services-section a h5{
+    color: var(--red);
+    text-align: left;
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
+}
+.top-services-section a .col-lg-3{
+    padding: 0;
+}
+.top-services-section .icon-container{
+    background-color: rgba(255,255,255,0.1);
+    padding:15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/********************************top-services-section****************************************End**************************************/
+
+
+
+
+
+
 /********************************portfolio section****************************************Start**************************************/
 
 .zoom-in{
     transform: scale(1.1);
-}
-#portfolio-section h1{
-    font-weight: bold;
 }
 #portfolio-section .portfolio-box{
     margin-top: 25px;
@@ -487,11 +528,6 @@ color: #fff;
     background-size: cover;
     background-attachment: fixed;
 }
-.social-section h1{
-    color: #fff;
-    letter-spacing: 0;
-    font-size: 3.5rem;
-}
 .social-section .icon-container{
     background-color:rgba(255,255,255,0.2) ;
     border-radius: 50%;
@@ -521,6 +557,18 @@ color: #fff;
 
 }
 /********************************social section****************************************End**************************************/
+
+
+
+
+
+
+
+
+
+
+
+
 /********************************testimonials section****************************************Start**************************************/
 .hidden {
     display: none; }
@@ -580,9 +628,6 @@ color: #999;
     background-attachment: fixed;
     position: relative;
 }
-.contact-form-section h1{
-    letter-spacing: 1px;
-}
 
 .contact-form-section .contact-info{
     background-color:rgba(0,0,0,0.15);
@@ -634,10 +679,6 @@ color: #999;
 
 .footer h6{
  font-size: 0.8rem;
-}
-footer p{
-    
-
 }
 .contact-form-section .scroll-top{
     width:29px;
