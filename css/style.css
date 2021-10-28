@@ -218,9 +218,6 @@ header .container{
 .call-area .call-link{
     margin-right: 10px;
 }
-/************************************************************************************************************************/
-
-/*slider-start*/
 .trust-overlay{
 background-color:rgba(0, 0, 0, 0.7);
 width: 100%;
@@ -229,6 +226,13 @@ z-index: 1;
 position: absolute;
 top:0;
 }
+/********************************header****************************************End**************************************/
+
+
+
+/********************************page carousel****************************************Start**************************************/
+
+
 #page-carousel .carousel-item img {
     -webkit-animation: thisthing 5s;
     -o-animation: thisthing 5s;
@@ -251,6 +255,12 @@ top:0;
 }
 #page-carousel .carousel-caption{
     bottom: 50%!important;
+}
+#page-carousel .carousel-caption p{
+    display: inline;
+    position:absolute;
+    bottom: -9px;
+    left:43%;
 }
 #page-carousel .carousel-caption::before{
     content: 'WE ARE TRUST CREATIVES';
@@ -333,10 +343,7 @@ top:0;
     color: #fff;
 }
 
-
-/*slider-end*/
-
-/*Header section  //////////End*/
+/********************************page carousel****************************************End**************************************/
 
 /********************************about section****************************************Start**************************************/
 #about-section p{
@@ -348,11 +355,18 @@ top:0;
     font-weight: 600;
 
 }
-
+#about-section .icon-container{
+    text-align: right;
+    margin-bottom: 10px;
+}
 #about-section svg{
     font-size: 2.3rem;
     color: var(--red);
 }
+/********************************about carousel****************************************End**************************************/
+
+/********************************first-banner section****************************************Start**************************************/
+
 .first-banner{
     background-image: url('../imgs/4-2.jpg');
     background-attachment: fixed;
@@ -365,7 +379,7 @@ top:0;
     display: none;
     width:100%;
     height: 50%;
-    background-color: var(--red);;
+    background-color: #fff;;
     position: absolute;
     -webkit-animation: textoverlay 0.5s;
     -o-animation: textoverlay 0.5s;
@@ -393,6 +407,50 @@ top:0;
 .first-banner h2{
     padding-bottom: 40px;
 }
+/********************************first-banner section****************************************End**************************************/
+/********************************strength-section****************************************Start**************************************/
+
+.zoom-in{
+    transform: scale(1.1);
+}
+#strength-section .portfolio-box{
+    margin-top: 25px;
+}
+#strength-section a{
+   display: block;
+   overflow: hidden;
+}
+#strength-section img{
+    width: 100%;
+    transition: all .7s ease-in-out;
+}
+#strength-section .portfolio-overlay{
+    width: calc(100% - 29px)!important;
+    background-color:rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top:0;
+    display: none;
+}
+#strength-section .portfolio-caption{
+    position: absolute;
+    left:31%;
+    bottom: 39%;
+    z-index: 1;
+    display: none;
+}
+#strength-section .portfolio-caption p{
+color: #fff;
+
+}
+#strength-section .portfolio-caption span{
+    color: var(--red);;
+    }
+/********************************portfolio section****************************************End**************************************/
+/********************************divider-band section****************************************Start**************************************/
+
 .divider-band{
     background-color: var(--red);;
     background-attachment: fixed;
@@ -434,13 +492,14 @@ top:0;
 .divider-band a:hover{
     color: #fff!important;
 }
-/********************************about section****************************************End**************************************/
+/********************************divider-band section****************************************End**************************************/
 
 /********************************achievements-section ****************************************Start**************************************/
 .achievements-section{
     background-image: url('../imgs/graphic-design/third.jpg');
     background-size: cover;
     background-attachment: fixed;
+    margin-top: 90px;
 }
 
 .achievements-section .number-container{
@@ -502,7 +561,9 @@ display: block;
     padding:15px;
 
 }
-
+.services-item{
+   opacity: 0;
+}
 
 
 
@@ -574,6 +635,7 @@ color: #fff;
     position: relative;
     margin: auto;
     margin-bottom: 20px;
+    transition: all 0.9s ease-in-out;
 }
 .social-section .icon-container svg{
     position: absolute;
@@ -584,11 +646,14 @@ color: #fff;
     color: #fff;
 }
 .social-section h5{
-    font-family: "Poppins";
+    font-family:'Raleway', sans-serif;
     font-weight: 500;
-    font-size: 1.4rem;
-    color: var(--red);
+    font-size: 1rem;
+    color: #fff;
 
+}
+.social-section h5:hover{
+    color: var(--red);
 }
 .social-section p {
     color:#fff;
@@ -618,6 +683,8 @@ color: #fff;
 .testimonials .client{
     padding: 80px 0;
     text-align: center; 
+    width: 82%;
+    margin: auto;
 }
 .testimonials .client img {
 width: 100px;
@@ -653,7 +720,11 @@ color: #999;
 
 
 #owl-branding-key-clients .item{
-    padding-top:20%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+#owl-branding-key-clients img{
+    margin: auto;
 }
 /********************************contact form section****************************************Start**************************************/
 
@@ -733,7 +804,9 @@ color: #999;
 .footer h6{
  font-size: 0.8rem;
 }
-
+.footer .footer-social-container{
+    text-align: right;
+}
 .page-head{
     position: relative;
 }

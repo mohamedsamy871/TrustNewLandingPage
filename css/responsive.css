@@ -18,20 +18,42 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Header section  ////////NaV End*/
+
+
+/******************************************About Section****************/
+
+@media (max-width:500px){
+    h1{
+        font-size: 2rem;
+    }
+    #about-section .icon-container{
+        text-align: left;
+    }
+    .first-banner h2{
+        font-size: 1.2rem;
+    }
+    #owl-branding-key-clients .item{
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+
+}
+@media (max-width:750px){
+    .footer .col-lg-6{
+        text-align: center;
+    }
+    .footer .footer-social-container{
+        text-align: center;
+    }
+}
+@media (max-width:900px){
+    #page-carousel .carousel-caption::before,
+    #page-carousel .carousel-caption::after{
+        font-size: 2.5rem;
+    }
+    #page-carousel .carousel-caption p{
+        bottom: -20px;
+        left: 237px;
+    }
+}

@@ -1,8 +1,23 @@
 $(document).ready(function(){
+
+
+//nice scroll
+$("html").niceScroll({
+    cursorcolor: "#cb0000", // change cursor color in hex
+    cursoropacitymin: 0, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
+    cursoropacitymax: 1, // change opacity when cursor is active (scrollabar "visible" state), range from 1 to 0
+    cursorwidth: "9px", // cursor width in pixel (you can also write "5px")
+    autohidemode:"scroll",
+    cursorborder: "1px solid transparent",
+});
+
+
+
 //text overlay animation in banner
     var textHeight = $('.first-banner h2').height()*3;
     var textWidth = $('.first-banner').width();
     var flag = 0;
+  
     if(flag==0){
         flag=1;
         $('.js-banner-animation ').hover(function(){
@@ -14,18 +29,12 @@ $(document).ready(function(){
         })
     }
 
-
-
-
-
-
 //numbering animation in services
 $(window).scroll(function() {
     var hT = $('#achievement-section').offset().top,
         hH = $('#achievement-section').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    console.log((hT - wH), wS);
     if (wS > (hT + hH - wH)) {
         $('.count-number').each(function() {
             $(this).prop('Counter', 0).animate({
@@ -42,6 +51,24 @@ $(window).scroll(function() {
         };
     }
 });
+
+
+//top-services-section fade in 
+
+$(window).scroll(function() {
+    var hT = $('.top-services-section').offset().top,
+        hH = $('.top-services-section').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    console.log((hT - wH), wS);
+    if (wS > (hT + hH - wH)) {
+        $('.services-item').each(function() {
+            $(this).animate({top:50, opacity:1}, 1500);
+        });
+    }
+});
+
+
 
 
 //hover in portfolio
@@ -80,7 +107,18 @@ $("#owl-branding-key-clients").owlCarousel({
     slideSpeed : 150,
     paginationSpeed : 200,
     singleItem:true,
-    autoHeight: true
+    autoHeight: true,
+    responsive:{
+        0:{
+            items:2,
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:5,
+        }
+    }
 });
 
 
@@ -110,6 +148,7 @@ function hidearrow(){
 
 
 //scroll
+
 $('.scroll-top a').click(function(){
     document.querySelector('#page-carousel').scrollIntoView({ 
         behavior: 'smooth' 
@@ -134,19 +173,6 @@ $('.scroll-top a').click(function(){
         });
       } // End if
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
