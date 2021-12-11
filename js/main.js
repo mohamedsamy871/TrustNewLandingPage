@@ -2,15 +2,12 @@ $(document).ready(function(){
 
 
 //nice scroll
+/*
 $("html").niceScroll({
     cursorcolor: "#cb0000", // change cursor color in hex
-    cursoropacitymin: 0, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
-    cursoropacitymax: 1, // change opacity when cursor is active (scrollabar "visible" state), range from 1 to 0
-    cursorwidth: "9px", // cursor width in pixel (you can also write "5px")
-    autohidemode:"scroll",
     cursorborder: "1px solid transparent",
 });
-
+*/
 
 
 //text overlay animation in banner
